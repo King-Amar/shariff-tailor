@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shariff Designer Tailor | Luxury Curtains & Interior Styling</title>
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap');
+
+    :root {
+        --gold: #D4AF37;
+        --gold-light: #F3C64A;
+        --bg-dark: #0A0A0A;
+        --bg-card: #161616;
+        --border-color: #2A2A2A;
+        --text-main: #FAFAFA;
+        --text-muted: #888888;
+        --whatsapp: #25D366;
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    }
+
+    body {
+        background-color: var(--bg-dark);
+        color: var(--text-main);
+        overflow-x: hidden;
+    }
+
+    header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background: rgba(10, 10, 10, 0.9);
+        backdrop-filter: blur(10px);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 60px;
+        border-bottom: 1px solid var(--border-color);
+        z-index: 1000;
+    }
+
+    .logo {
+        font-family: 'Playfair Display', serif;
+        font-size: 1.4rem;
+        font-weight: 600;
+        color: var(--gold);
+        letter-spacing: 3px;
+        font-style: italic;
+    }
+
+    nav {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+    }
+
+    nav a {
+        color: var(--text-main);
+        text-decoration: none;
+        font-size: 0.9rem;
+        font-weight: 500;
+        letter-spacing: 1px;
+        transition: color 0.3s;
+    }
+
+    nav a:hover {
+        color: var(--gold);
+    }
+
+    .nav-wa {
+        background: var(--whatsapp);
+        color: #fff !important;
+        padding: 8px 18px;
+        border-radius: 20px;
+        font-weight: 600 !important;
+    }
+
+    .hero {
+        height: 90vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 0 20px;
+        background: radial-gradient(circle at center, #1c1c1c 0%, var(--bg-dark) 70%);
+        border-bottom: 1px solid var(--border-color);
+        margin-top: 70px;
+    }
+
+    .hero h1 {
+        font-family: 'Playfair Display', serif;
+        font-size: 4.2rem;
+        background: linear-gradient(135deg, #FFF 20%, var(--gold) 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin-bottom: 20px;
+        letter-spacing: 2px;
+        font-weight: 400;
+    }
+
+    .hero p {
+        font-size: 1.1rem;
+        max-width: 650px;
+        color: var(--text-muted);
+        margin-bottom: 40px;
+        line-height: 1.8;
+    }
+
+    .btn-primary {
+        background: var(--gold);
+        color: #000;
+        padding: 14px 35px;
+        border-radius: 30px;
+        font-weight: 700;
+        text-decoration: none;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        transition: all 0.3s ease;
+    }
+
+    .btn-primary:hover {
+        background: var(--gold-light);
+        transform: translateY(-2px);
+        box-shadow: 0 10px 25px rgba(212, 175, 55, 0.3);
+    }
+        .studio-section {
+            max-width: 1300px;
+            margin: 100px auto;
+            padding: 0 30px;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-header h2 {
+            font-size: 2.5rem;
+            color: var(--gold);
+            margin-bottom: 15px;
+            font-weight: 300;
+            letter-spacing: 2px;
+        }
+
+        .section-header p {
+            color: var(--text-muted);
+            font-size: 1rem;
+        }
+
+        .studio-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 40px;
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 40px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+        }
+
+        @media (max-width: 900px) {
+            .studio-grid {
+                grid-template-columns: 1fr;
+            }
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+        }
+
+        .viewport-3d {
+            width: 100%;
+            height: 500px;
+            background: #000;
+            border-radius: 12px;
+            overflow: hidden;
+            position: relative;
+            border: 1px solid var(--border-color);
+        }
+
+        .viewport-3d img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: opacity 0.4s ease-in-out;
+        }
+
+        .controls-panel {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .controls-panel h3 {
+            font-size: 1.1rem;
+            color: var(--text-main);
+            margin-bottom: 20px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .fabric-options {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 12px;
+            margin-bottom: 30px;
+        }
+
+        .fabric-btn {
+            background: #1F1F1F;
+            border: 1px solid var(--border-color);
+            color: var(--text-main);
+            padding: 15px 20px;
+            border-radius: 10px;
+            cursor: pointer;
+            text-align: left;
+            font-weight: 500;
+            transition: all 0.3s;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .fabric-btn:hover, .fabric-btn.active {
+            border-color: var(--gold);
+            background: #252525;
+        }
+
+        .fabric-btn.active span {
+            color: var(--gold);
+        }
+
+        .whatsapp-order-btn {
+            background: var(--whatsapp);
+            color: #fff;
+            text-align: center;
+            padding: 16px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 700;
+            letter-spacing: 1px;
+            display: block;
+            transition: opacity 0.3s;
+        }
+
+        .whatsapp-order-btn:hover {
+            opacity: 0.9;
+        }
+
+        .gallery-section {
+            max-width: 1300px;
+            margin: 100px auto;
+            padding: 0 30px;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+        }
+
+        .gallery-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            overflow: hidden;
+            transition: transform 0.3s, border-color 0.3s;
+        }
+
+        .gallery-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--gold);
+        }
+
+        .gallery-card img {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+        }
+
+        .gallery-info {
+            padding: 25px;
+        }
+
+        .gallery-info h4 {
+            color: var(--gold);
+            font-size: 1.2rem;
+            margin-bottom: 8px;
+            font-weight: 400;
+        }
+
+        .gallery-info p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        footer {
+            text-align: center;
+            padding: 50px;
+            border-top: 1px solid var(--border-color);
+            color: var(--text-muted);
+            font-size: 0.85srem;
+            letter-spacing: 1px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">Shariff Tailor</div>
+        <nav>
+            <a href="#studio">3D Studio</a>
+            <a href="#showroom">Showroom</a>
+            <a href="https://wa.me/254700000000?text=Hello%20Shariff,%20I%20would%20like%20to%20inquire%20about%20your%20curtain%20designs." target="_blank" class="nav-wa">WhatsApp Us</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Bespoke Window Elegance</h1>
+        <p>Crafted by Master Tailor Shariff in Mombasa. High-end custom drapes, royal valances, and elite interior styling designed explicitly for luxury living spaces.</p>
+        <a href="#studio" class="btn-primary">Launch 3D Studio</a>
+    </section>
+
+    <!-- Interactive 3D Studio Section -->
+    <section class="studio-section" id="studio">
+        <div class="section-header">
+            <h2>Interactive Curtain Studio</h2>
+            <p>Select a luxury fabric finish to preview it live on our custom window framework.</p>
+        </div>
+
+        <div class="studio-grid">
+            <div class="viewport-3d">
+                <!-- Using file names from your local folder structure -->
+                <img id="mainStage" src="hero-taupe-velvet.jpg" alt="Curtain Preview">
+            </div>
+
+            <div class="controls-panel">
+                <div>
+                    <h3>Select Fabric</h3>
+                    <div class="fabric-options">
+                        <button class="fabric-btn active" onclick="switchFabric('hero-taupe-velvet.jpg', 'Taupe Velvet', this)">
+                            Taupe Velvet Master Setup <span>✦</span>
+                        </button>
+                        <button class="fabric-btn" onclick="switchFabric('blue-gold-drape.jpg', 'Blue & Gold Royal', this)">
+                            Blue & Gold Drape <span>✦</span>
+                        </button>
+                        <button class="fabric-btn" onclick="switchFabric('crimson-elegance.jpg', 'Crimson Elegance', this)">
+                            Crimson Elegance <span>✦</span>
+                        </button>
+                        <button class="fabric-btn" onclick="switchFabric('modern-grey-corner.jpg', 'Modern Grey Corner', this)">
+                            Modern Grey Corner <span>✦</span>
+                        </button>
+                    </div>
+                </div>
+
+                <a id="waOrderBtn" href="https://wa.me/254700000000?text=Hello%20Shariff,%20I%20am%20interested%20in%20ordering%20the%20Taupe%20Velvet%20Master%20Setup." target="_blank" class="whatsapp-order-btn">
+                    Order via WhatsApp
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Showroom Masterpieces Gallery -->
+    <section class="gallery-section" id="showroom">
+        <div class="section-header">
+            <h2>Showroom Masterpieces</h2>
+            <p>Explore our signature creations installed across elite residences.</p>
+        </div>
+
+        <div class="gallery-grid">
+            <div class="gallery-card">
+                <img src="blue-gold-drape.jpg" alt="Blue & Gold Drape">
+                <div class="gallery-info">
+                    <h4>Royal Blue & Gold Drapes</h4>
+                    <p>Heavy velvet panels accented with hand-finished gold trimmings.</p>
+                </div>
+            </div>
+
+            <div class="gallery-card">
+                <img src="crimson-elegance.jpg" alt="Crimson Elegance">
+                <div class="gallery-info">
+                    <h4>Crimson Lounge Elegance</h4>
+                    <p>Dramatic multi-layered red drapes engineered for executive lounges.</p>
+                </div>
+            </div>
+
+            <div class="gallery-card">
+                <img src="modern-grey-corner.jpg" alt="Modern Grey Corner">
+                <div class="gallery-info">
+                    <h4>Minimalist Corner Pleats</h4>
+                    <p>Sleek, architecturally aligned vertical drapes for modern apartments.</p>
+                </div>
+            </div>
+
+            <div class="gallery-card">
+                <img src="canopy-bed-white.jpg" alt="Canopy Bed White">
+                <div class="gallery-info">
+                    <h4>Custom Bedroom Canopies</h4>
+                    <p>Immaculate mosquito netting and bespoke overhead fabric draping.</p>
+                </div>
+            </div>
+
+            <div class="gallery-card">
+                <img src="canopy-bed-pink.jpg" alt="Canopy Bed Pink">
+                <div class="gallery-info">
+                    <h4>Soft Pastel Canopies</h4>
+                    <p>Delicate, flowing pink canopy setups designed for luxurious bedrooms.</p>
+                </div>
+            </div>
+
+            <div class="gallery-card">
+                <img src="kitchen-fruit-print.jpg" alt="Kitchen Print Curtains">
+                <div class="gallery-info">
+                    <h4>Kitchen & Utility Styling</h4>
+                    <p>Fresh, bright, and easy-maintenance prints tailored for kitchens.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Shariff Designer Tailor. Master Tailoring in Mombasa, Kenya. All Rights Reserved.</p>
+        <p style="margin-top: 8px; color: var(--gold); font-size: 0.8rem; letter-spacing: 2px; text-transform: uppercase;">Powered by AV Digital Solutions</p>
+    </footer>
+
+    <script>
+        function switchFabric(imageSrc, fabricName, element) {
+            const stage = document.getElementById('mainStage');
+            stage.style.opacity = 0;
+            setTimeout(() => {
+                stage.src = imageSrc;
+                stage.style.opacity = 1;
+            }, 200);
+
+            document.querySelectorAll('.fabric-btn').forEach(btn => btn.classList.remove('active'));
+            element.classList.add('active');
+
+            const waBtn = document.getElementById('waOrderBtn');
+            waBtn.href = `https://wa.me/254700000000?text=Hello%20Shariff,%20I%20am%20interested%20in%20ordering%20the%20${encodeURIComponent(fabricName)}.`;
+        }
+    </script>
+
+</body>
+</html>
